@@ -9,14 +9,14 @@ export default function Products() {
     return (
         <View style={styles.container}>
 
-            <Text>Products</Text>
+            <Text style={styles.title}>Products</Text>
 
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
-                <Text>Go Home</Text>
+                <Text style={styles.buttonText}>Go Home</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Login")}>
-                <Text>Go Login</Text>
+                <Text style={styles.buttonText}>Go Login</Text>
             </TouchableOpacity>
 
         </View>
@@ -25,14 +25,33 @@ export default function Products() {
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
-        // justifyContent: 'center',
-        // paddingHorizontal: 10,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    title: {
+        marginBottom: 14,
+        fontSize: 20,
+    },
+    input: {
+        width: '90%',
+        height: 45,
+        backgroundColor: '#A7A7A7',
+        borderRadius: 4,
+        marginBottom: 14,
+        padding: 8,
     },
     button: {
+        width: '90%',
+        height: 45,
+        backgroundColor: '#B0060E',
+        borderRadius: 4,
+        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10,
-        marginVertical: 2,
+        marginBottom: 14
     },
+    buttonText: {
+        fontSize: 20,
+        color: '#FFF'
+    }
 })
